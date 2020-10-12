@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>INFO KULINER</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -13,7 +13,9 @@
       margin-bottom: 0;
       border-radius: 0;
     }
-    
+    .navbar h2{
+      color: white;
+    }
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
     
@@ -46,58 +48,34 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">INFO KULINER</a>
+      <h2>INFO KULINER</h2>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
+    
       <ul class="nav navbar-nav navbar-right">
-        <li><a href=""><span class="glyphicon glyphicon-log-in"></span></a></li>
+        <li><a href="./controller/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-<div class="content" >
-    <ul class="list-group col-md-3 col-xs-2">
-        <li class="list-group-item"><a href="../admin/kuliner.php"></a></li>
-        <li class="list-group-item"><a href="../admin/kuliner.php"></a></li>
-    </ul>
-    <?php include_once $content; ?>
-</div>
   
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#"></a></p>
-      <p><a href="#"></a></p>
-      <p><a href="#"></a></p>
+     
     </div>
     <div class="col-sm-8 text-left"> 
-      
+      <?php include_once $content; ?>
     </div>
     <div class="col-sm-2 sidenav">
-      <div class="well">
-        
-      </div>
-      <div class="well">
-        
+      
       </div>
     </div>
   </div>
 </div>
 
 <footer class="container-fluid text-center">
-  <p>GitaOktayani</p>
+  <p>InfoKuliner</p>
 </footer>
 
 </body>

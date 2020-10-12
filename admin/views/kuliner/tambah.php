@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<h4>Tambah Data</h4>
+<hr>
+<form action="index.php?mod=kuliner&page=save" method="POST">
+    <div class="col-lg-md-6">
+    <div class="form-group">
+    <label for="">Jenis Kuliner</label>
+       <select name="Jenis_Kuliner" class="form-control" id="">
+       <option value="pilih">Pilih Salah Satu</option>
+           <option value="minuman">Minuman</option>
+           <option value="makanan">Makanan</option>
+       </select>
+    </div>
+    <div class="form-group">
+        <label for="">Nama Kuliner</label>
+        <input type="text" name="Nama_Kuliner" class="form-control" id="">
+    </div>
+    
+
+    </div>
+
+    <div class="col-lg-md-6">
+    <div class="form-group">
+    <label for="">Keterangan</label>
+        <input type="text" name="Keterangan" class="form-control" id="">
+    </div>
+    <div class="form-group">
+        <button type="submit" name="submit" class="btn btn-primary">Save</button>
+    </div>
+
+    </div>
+
+</form>

@@ -13,11 +13,11 @@
   <form action="" method="POST">
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email">
+      <input type="email" class="form-control" name="email" placeholder="Enter email">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      <input type="password" class="form-control" name="password" placeholder="Enter password">
         <span><?=(isset($msg))?$msg:'';?></span>
     </div>
     <div class="form-group pull-right">
