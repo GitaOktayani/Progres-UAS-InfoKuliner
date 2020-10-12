@@ -10,7 +10,7 @@ if(isset($_POST['email'])){
         session_start();
         $_SESSION['login']['email']=$sess['email'];
         $_SESSION['login']['id']=$sess['id'];
-        header('Location:'.'http://localhost/infokuliner/admin/index.php?mod=kuliner');
+        header('Location: http://localhost/infokuliner/admin/index.php?mod=kuliner');
     }
     else{
         $msg="Email dan Password tidak cocok";
