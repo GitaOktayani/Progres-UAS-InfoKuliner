@@ -13,6 +13,11 @@
       margin-bottom: 0;
       border-radius: 0;
     }
+    img{
+      width: 20%;
+      margin-left: 10%;
+      
+    }
     .navbar h2{
       color: white;
     }
@@ -48,6 +53,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
+      <img src="../asset/logo2.png">
       <h2>INFO KULINER</h2>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
