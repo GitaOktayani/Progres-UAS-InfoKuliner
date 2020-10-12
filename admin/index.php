@@ -14,5 +14,6 @@ switch(@$_GET['mod']){
 else{
     //panggil cont login
     include_once 'controller/login.php';
+    
 }
 ?>
