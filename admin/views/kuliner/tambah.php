@@ -27,7 +27,7 @@
     <div class="form-group">
     <label for="">Keterangan</label>
         <input type="text" name="Keterangan" required class="form-control" id="" value="<?=(isset($_POST['Keterangan']))?$_POST['Keterangan']:'';?>">
-        <input type="" name="id" class="form-control" id="" value="<?=(isset($_POST['id']))?$_POST['id']:'';?>">
+        <input type="hidden" name="id" class="form-control" id="" value="<?=(isset($_POST['id']))?$_POST['id']:'';?>">
     </div>
     <div class="form-group">
         <button type="submit" name="submit" class="btn btn-primary">Save</button>

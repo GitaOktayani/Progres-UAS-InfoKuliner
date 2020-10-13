@@ -51,6 +51,13 @@ switch(@$_GET['page']){
         $content="views/kuliner/tambah.php";
         include_once 'views/kuliner/template.php'; 
         break;
+    case 'delete';
+        $kuliner="DELETE  FROM data_kuliner WhERE id='$_GET[id]'";
+        $kuliner=$conn->query($kuliner);
+        var_dump($kuliner);
+        header('Location:'.$con->site_url().'/admin/index.php?mod=kuliner');
+
+    break;
     default:
     $sql = "Select * from data_kuliner";
     $kuliner=$conn->query($sql);
