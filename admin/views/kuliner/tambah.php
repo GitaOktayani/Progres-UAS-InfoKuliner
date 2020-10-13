@@ -7,15 +7,17 @@
     <div class="col-lg-md-6">
     <div class="form-group">
     <label for="">Jenis Kuliner</label>
-       <select name="Jenis_Kuliner" class="form-control" id="">
+       <select name="Jenis_Kuliner" class="form-control" id="" required>
        <option value="pilih">Pilih Salah Satu</option>
            <option value="minuman">Minuman</option>
            <option value="makanan">Makanan</option>
        </select>
+       <span class="text-danger"><?=(isset($err['Jenis_Kuliner']))?$err['Jenis_Kuliner']:'';?></span>
     </div>
     <div class="form-group">
         <label for="">Nama Kuliner</label>
-        <input type="text" name="Nama_Kuliner" class="form-control" id="">
+        <input type="text" name="Nama_Kuliner" required class="form-control" id="" value="<?=(isset($_POST['Nama_Kuliner']))?$_POST['Nama_Kuliner']:'';?>">
+        <span class="text-danger"><?=(isset($err['Nama_Kuliner']))?$err['Nama_Kuliner']:'';?></span>
     </div>
     
 
@@ -24,7 +26,8 @@
     <div class="col-lg-md-6">
     <div class="form-group">
     <label for="">Keterangan</label>
-        <input type="text" name="Keterangan" class="form-control" id="">
+        <input type="text" name="Keterangan" required class="form-control" id="" value="<?=(isset($_POST['Keterangan']))?$_POST['Keterangan']:'';?>">
+        <input type="" name="id" class="form-control" id="" value="<?=(isset($_POST['id']))?$_POST['id']:'';?>">
     </div>
     <div class="form-group">
         <button type="submit" name="submit" class="btn btn-primary">Save</button>

@@ -26,8 +26,8 @@
                 <tr>
                     <td><?=$no;?></td><td><?=$row['Jenis_Kuliner'] ?></td><td><?=$row['Nama_Kuliner'];?></td>
                     <td>
-                        <a href="index.php?mod=kuliner&page=edit&id=<?=md5($row['id'])?>"><i class="fa fa-pencil"></i></a>
-                        <a href="index.php?mod=kuliner&page=delete&id=<?=md5($row['id'])?>"><i class="fa fa-trash"></i></a>
+                        <a href="index.php?mod=kuliner&page=edit&id=<?=($row["id"])?>"><i class="fa fa-pencil"></i></a>
+                        <a href="index.php?mod=kuliner&page=delete&id=<?=($row["id"])?>"><i class="fa fa-trash"></i></a>
                    <!--untuk menggunakan font awesome maka run file harus online  -->
                     </td>
                 </tr>
