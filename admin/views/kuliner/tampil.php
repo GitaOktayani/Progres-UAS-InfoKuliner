@@ -7,7 +7,7 @@
     <br>
     <div class="pull-right">
         <a href="index.php?mod=kuliner&page=add">
-            <button class="btn btn-primary" >add</button>
+        <button class="btn btn-primary" >add</button>
     </a>
     </div>
 </div>

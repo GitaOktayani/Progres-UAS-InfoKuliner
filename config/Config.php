@@ -22,4 +22,5 @@ class Config{
         return "http://localhost/infokuliner/";
     }
 }
+
 ?>

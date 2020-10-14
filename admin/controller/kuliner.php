@@ -47,7 +47,6 @@ switch(@$_GET['page']){
       $kuliner=$conn->query($kuliner);
       $_POST=$kuliner->fetch_assoc();
       
-       
         $content="views/kuliner/tambah.php";
         include_once 'views/kuliner/template.php'; 
         break;

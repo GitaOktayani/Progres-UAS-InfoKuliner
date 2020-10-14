@@ -83,6 +83,5 @@
 <footer class="container-fluid text-center">
   <p>InfoKuliner</p>
 </footer>
-
 </body>
 </html>
