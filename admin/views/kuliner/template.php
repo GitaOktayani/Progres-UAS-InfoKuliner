@@ -57,6 +57,10 @@
       <h2>INFO KULINER</h2>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+        <li class=""><a href="index.php?mode=home">Home</a></li>
+        <li><a href="index.php?mod=kuliner">Data Kuliner</a></li>
+        <li><a href="index.php?mod=tempatmakan">Tempat Makan</a></li>
     
       <ul class="nav navbar-nav navbar-right">
         <li><a href="./controller/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
