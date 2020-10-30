@@ -23,7 +23,7 @@ $target_file = $target_dir . $photo;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-// Check if image file is a actual image or fake image
+
 
 
 // Check if file already exists
