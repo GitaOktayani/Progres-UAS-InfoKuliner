@@ -7,7 +7,7 @@
     <div class="col-lg-md-6">
     <div class="form-group">
     <label for="">Jenis Kuliner</label>
-       <select name="Jenis_Kuliner" class="form-control" id="" required>
+       <select name="Jenis_Kuliner" class="form-control" id="" required >
        <option value="pilih">Pilih Salah Satu</option>
            <option value="minuman">Minuman</option>
            <option value="makanan">Makanan</option>

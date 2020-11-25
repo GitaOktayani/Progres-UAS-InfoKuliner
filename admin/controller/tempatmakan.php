@@ -15,17 +15,20 @@ switch(@$_GET['page']){
             if(empty($_POST['Alamat'])){
                 $err['Alamat']="Alamat wajib diisi";
             }
+            if(empty($_POST['Maps'])){
+                $err['Maps']="Link Maps wajib diisi";
+            }
             if(!isset($err)){
             $id_admin=$_SESSION['login']['id'];
             if(!empty($_POST['id'])){
                 //update
-                $sql="UPDATE tempat_makan set Nama_Tempat='$_POST[Nama_Tempat]',Alamat='$_POST[Alamat]',
+                $sql="UPDATE tempat_makan set Nama_Tempat='$_POST[Nama_Tempat]',Alamat='$_POST[Alamat]',Maps='$_POST[Maps]',
                 id_admin=$id_admin where id='$_POST[id]'";
             }
             else{
                 //save
-            $sql = "INSERT INTO tempat_makan(Nama_Tempat,Alamat,id_admin)
-            VALUES ('$_POST[Nama_Tempat]','$_POST[Alamat]',$id_admin)";
+            $sql = "INSERT INTO tempat_makan(Nama_Tempat,Alamat,Maps,id_admin)
+            VALUES ('$_POST[Nama_Tempat]','$_POST[Alamat]','$_POST[Maps]',$id_admin)";
             }
             if ($conn->query($sql) === TRUE) {
             header('Location:'.$con->site_url().'/admin/index.php?mod=tempatmakan');

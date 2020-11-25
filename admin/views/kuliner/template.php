@@ -14,13 +14,28 @@
       border-radius: 0;
     }
     img{
-      width: 20%;
-      margin-left: 10%;
+      width: 100px;
+      margin-left: 10px;
+      margin-top:2px;
+      position: relative;
+      
       
     }
     .navbar h2{
       color: white;
+      margin-top: 0px;
+      margin-left: 10px;
+      margin-bottom: 0px;
+      display: inline;
+     
     }
+    .menu{
+      margin-left: 500px;
+      display: inline-flexbox;
+    
+    }
+    
+    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
     
@@ -40,6 +55,10 @@
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
+      .navbar{
+        height: auto;
+        padding: 15px;
+      }
       .sidenav {
         height: auto;
         padding: 15px;
@@ -55,16 +74,16 @@
     <div class="navbar-header">
       <img src="../asset/logo2.png">
       <h2>INFO KULINER</h2>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav">
+      <div class="menu">
+      <ul class="nav navbar-nav">
         <li class=""><a href="index.php?mode=home">Home</a></li>
         <li><a href="index.php?mod=kuliner">Data Kuliner</a></li>
         <li><a href="index.php?mod=tempatmakan">Tempat Makan</a></li>
-    
       <ul class="nav navbar-nav navbar-right">
         <li><a href="./controller/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
+  </div>
+      </div>
     </div>
   </div>
 </nav>

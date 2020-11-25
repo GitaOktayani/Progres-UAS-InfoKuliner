@@ -22,10 +22,17 @@ $photo=basename($_FILES["fileToUpload"]["name"]);
 $target_file = $target_dir . $photo;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-
-
-
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check == false) {
+        $err["fileToUpload"]= "File is not an image.";
+        $uploadOk = 0;
+    } else {
+        
+    
+    }
+  }
 // Check if file already exists
 if (file_exists($target_file)) {
     $err['fileToUpload']= "Sorry, file already exists.";
@@ -109,7 +116,6 @@ if ($uploadOk == 1) {
     case 'delete';
         $kuliner="DELETE  FROM data_kuliner WhERE id='$_GET[id]'";
         $kuliner=$conn->query($kuliner);
-        var_dump($kuliner);
         header('Location:'.$con->site_url().'/admin/index.php?mod=kuliner');
 
     break;

@@ -1,3 +1,12 @@
+<style>
+    .all{
+        padding-top: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+   
+</style>
+<div class="all">
 <div class="row">
     <div class="pull-left">
         
@@ -22,7 +31,7 @@
     pecinta kuliner yaitu Kober Mie Setan. Kober Mie Setan telah berdiri selama 8 tahun sejak 2010 dan pertama kali dibuka dioutlet di kota Malang,
     namun saat ini Kober Mie Setan udah memiliki banyak cabang diberbagai daerah sehingga anda tidak perlu khawatir jika ingin mencicipi rasa Kober Mie Setan.
     Selain Mie Setan, disini juga disediakan berbagai menu lainnya yang pasti tidak kalah enak. </p>
-    <a href="#" class="continue-lendo">Selengkapnya →</a>
+    
     </div>
     <div class="conteudo">
         <img src="../asset/dalgona.jpg">
@@ -36,8 +45,9 @@
     Dalgona Coffe adalah gabungan kopi instan, gula, dan air panas yang diaduk secara cepat (<i>whipped</i> ) lalu disajikan diatas krim begitula
     pengertian singkatnya, orang orang pun berlomba lomba mencoba membuat karna kemudahan cara pembuatannya.
     </p>
-    <a href="#" class="continue-lendo">Selengkapnya →</a>
+    
     </div>
         </tbody>
     </table>
+</div>
 </div>

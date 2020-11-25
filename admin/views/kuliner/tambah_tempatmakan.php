@@ -22,6 +22,12 @@
         <span class="text-danger"><?=(isset($err['Alamat']))?$err['Alamat']:'';?></span>
         <input type="hidden" name="id" class="form-control" id="" value="<?=(isset($_POST['id']))?$_POST['id']:'';?>">
     </div>
+
+    <div class="form-group">
+        <label for="">Maps</label>
+        <input type="text" name="Maps" placeholder="Masukan Link Maps Tempat Makan" required class="form-control" id="" value="<?=(isset($_POST['Maps']))?$_POST['Maps']:'';?>">
+        <span class="text-danger"><?=(isset($err['Maps']))?$err['Maps']:'';?></span>
+    </div>
     <div class="form-group">
         <button type="submit" name="submit" class="btn btn-primary">Save</button>
     </div>

@@ -5,11 +5,31 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body{
+     background-color:dimgray;
+    }
+    .col-md-4{
+      margin-top: 100px;
+      background-color: #F8F8FF;
+      box-shadow: black;
+    
+      
+    }
+      
+    .judul{
+      margin-left: 120px;
+    }
+  </style>
 </head>
 <body>
 
+
+
+<div class="wrap-form-contact">
 <div class="container">
-  <h2>LOGIN</h2>
+<div class="col-md-4 col-md-offset-4">
+  <h2 class="judul">LOGIN</h2>
   <form action="" method="POST">
     <div class="form-group">
       <label for="email">Email:</label>
@@ -24,6 +44,7 @@
     <button type="submit" class="btn btn-default">Submit</button>
     </div>
   </form>
+</div>
 </div>
 </body> 
 </html>
