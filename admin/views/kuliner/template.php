@@ -30,7 +30,7 @@
      
     }
     .menu{
-      margin-left: 500px;
+      margin-left: 400px;
       display: inline-flexbox;
     
     }
@@ -79,6 +79,7 @@
         <li class=""><a href="index.php?mode=home">Home</a></li>
         <li><a href="index.php?mod=kuliner">Data Kuliner</a></li>
         <li><a href="index.php?mod=tempatmakan">Tempat Makan</a></li>
+        <li><a href="index.php?mod=resep">Resep Makanan</a></li>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="./controller/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>

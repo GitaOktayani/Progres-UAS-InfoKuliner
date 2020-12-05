@@ -14,7 +14,7 @@ if(isset($_POST['email'])){
     }
     else{
         $msg="Email dan Password tidak cocok";
-         include_once 'views/v_login.php';
+        include_once 'views/v_login.php';
     }
 }
 else{

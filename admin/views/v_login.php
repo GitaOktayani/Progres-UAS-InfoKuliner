@@ -30,7 +30,7 @@
 <div class="container">
 <div class="col-md-4 col-md-offset-4">
   <h2 class="judul">LOGIN</h2>
-  <form action="" method="POST">
+  <form action="" id="loginform" method="POST">
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" name="email" placeholder="Enter email">
@@ -46,5 +46,29 @@
   </form>
 </div>
 </div>
+<script type="text/javascript">
+        $.ajax({
+            type: "POST",
+            url: 'login.php',
+            data: $(this).serialize(),
+            success: function(response)
+            {
+                var jsonData = JSON.parse(response);
+  
+                // user is logged in successfully in the back-end
+                // let's redirect
+                if (jsonData.success == "1")
+                {
+                    location.href = 'kuliner.php'
+                }
+                else
+                {
+                    alert('Invalid Credentials!');
+                }
+           }
+       });
+     });
+});
+</script>
 </body> 
 </html>

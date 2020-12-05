@@ -10,6 +10,9 @@ switch(@$_GET['mod']){
         case 'tempatmakan':
             include_once 'controller/tempatmakan.php';
             break;
+            case 'resep':
+                include_once 'controller/resep.php';
+                break;
     default:
         include_once 'controller/home.php';
 }
