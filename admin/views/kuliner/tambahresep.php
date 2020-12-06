@@ -8,11 +8,13 @@
         <label for="">Nama Resep</label>
         <input type="text" name="Nama_Resep" required class="form-control" id="" value="<?=(isset($_POST['Nama_Resep']))?$_POST['Nama_Resep']:'';?>">
         <span class="text-danger"><?=(isset($err['Nama_Resep']))?$err['Nama_Resep']:'';?></span>
+        <input type="hidden" name="id" class="form-control" id="" value="<?=(isset($_POST['id']))?$_POST['id']:'';?>">
         <input type="hidden" name="file_old" class="form-control" id="" value="<?=(isset($_POST['Resep']))?$_POST['Resep']:'';?>">
     </div>
     
     <div class="form-group">
         <label for="">Resep</label>
+        <file src="../media/<?=$_POST['Resep']?>">
         <input type="file" name="fileToUpload" class="form-control">
         <span class="text-danger"><?=(isset($err['fileToUpload']))?$err['fileToUpload']:'';?></span>
     </div>
