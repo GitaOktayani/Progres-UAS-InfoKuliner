@@ -33,11 +33,11 @@
   <form action="" id="loginform" method="POST">
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" name="email" placeholder="Enter email">
+      <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" name="password" placeholder="Enter password">
+      <input type="password" class="form-control" name="password" id="email" placeholder="Enter password">
         <span><?=(isset($msg))?$msg:'';?></span>
     </div>
     <div class="form-group pull-right">
@@ -47,26 +47,27 @@
 </div>
 </div>
 <script type="text/javascript">
-        $.ajax({
+     //  $(document).ready(function() {
+//  $('#loginform').submit(function(e) {
+     //var email = $('email').val();
+    // if(email != ''){
+      $.ajax({
             type: "POST",
             url: 'login.php',
             data: $(this).serialize(),
-            success: function(response)
-            {
-                var jsonData = JSON.parse(response);
-  
-                // user is logged in successfully in the back-end
-                // let's redirect
-                if (jsonData.success == "1")
-                {
-                    location.href = 'kuliner.php'
-                }
-                else
-                {
-                    alert('Invalid Credentials!');
-                }
-           }
+            success: function(data)
+            if(data == 'No'){
+              alert('Email atau Password Salah');
+            }
+            else{
+              llocation.href = ' http://localhost/infokuliner/admin/index.php?mod=kuliner';
+            }
        });
+     }
+     else{
+       alert("Masukan Email dan Password")
+     }
+        
      });
 });
 </script>

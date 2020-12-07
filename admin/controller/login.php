@@ -11,10 +11,12 @@ if(isset($_POST['email'])){
         $_SESSION['login']['email']=$sess['email'];
         $_SESSION['login']['id']=$sess['id'];
         header('Location: http://localhost/infokuliner/admin/index.php?mod=kuliner');
+        //echo'Yes';
     }
     else{
         $msg="Email dan Password tidak cocok";
         include_once 'views/v_login.php';
+       // echo'No';
     }
 }
 else{
