@@ -10,13 +10,13 @@ if(isset($_POST['email'])){
         session_start();
         $_SESSION['login']['email']=$sess['email'];
         $_SESSION['login']['id']=$sess['id'];
-        header('Location: http://localhost/infokuliner/admin/index.php?mod=kuliner');
-        //echo'Yes';
+    header('Location: http://localhost/infokuliner/admin/index.php?mod=kuliner');
+       //echo'Yes';
     }
     else{
-        $msg="Email dan Password tidak cocok";
-        include_once 'views/v_login.php';
-       // echo'No';
+    $msg="Email dan Password tidak cocok";
+    include_once 'views/v_login.php';
+        echo'No';
     }
 }
 else{

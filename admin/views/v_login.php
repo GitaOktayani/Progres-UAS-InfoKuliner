@@ -47,20 +47,20 @@
 </div>
 </div>
 <script type="text/javascript">
-     //  $(document).ready(function() {
-//  $('#loginform').submit(function(e) {
-     //var email = $('email').val();
-    // if(email != ''){
+     $(document).ready(function() {
+$('#loginform').submit(function(e) {
+     var email = $('email').val();
+    if(email != ''){
       $.ajax({
             type: "POST",
             url: 'login.php',
             data: $(this).serialize(),
             success: function(data)
-            if(data == 'No'){
+            if(data = 'No'){
               alert('Email atau Password Salah');
             }
             else{
-              llocation.href = ' http://localhost/infokuliner/admin/index.php?mod=kuliner';
+              location.href = ' http://localhost/infokuliner/admin/index.php?mod=kuliner';
             }
        });
      }
