@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2020 at 05:41 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Waktu pembuatan: 09 Des 2020 pada 04.15
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data_kuliner`
+-- Struktur dari tabel `data_kuliner`
 --
 
 CREATE TABLE `data_kuliner` (
@@ -37,16 +37,18 @@ CREATE TABLE `data_kuliner` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `data_kuliner`
+-- Dumping data untuk tabel `data_kuliner`
 --
 
 INSERT INTO `data_kuliner` (`id`, `Jenis_Kuliner`, `Nama_Kuliner`, `Keterangan`, `id_admin`, `photo`) VALUES
-(37, 'Makanan', 'Mie Kober', 'Mie Pedas hits', 1, 'kober.jpg');
+(75, 'Minuman', 'Dalgona', 'Kopi Hits Zaman now', 1, 'dalgona.jpg'),
+(76, 'Makanan', 'Kerak Telor', 'Makanan khas Betawi', 1, 'kerak-telor.jpg'),
+(77, 'Makanan', 'Mie Kober', 'mie pedas', 1, 'kober.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data_login`
+-- Struktur dari tabel `data_login`
 --
 
 CREATE TABLE `data_login` (
@@ -57,7 +59,7 @@ CREATE TABLE `data_login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `data_login`
+-- Dumping data untuk tabel `data_login`
 --
 
 INSERT INTO `data_login` (`id`, `email`, `password`, `active`) VALUES
@@ -67,49 +69,96 @@ INSERT INTO `data_login` (`id`, `email`, `password`, `active`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tempat_makan`
+-- Struktur dari tabel `resep`
+--
+
+CREATE TABLE `resep` (
+  `id` int(11) NOT NULL,
+  `Nama_Resep` varchar(45) NOT NULL,
+  `Resep` varchar(255) NOT NULL,
+  `id_admin` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `resep`
+--
+
+INSERT INTO `resep` (`id`, `Nama_Resep`, `Resep`, `id_admin`) VALUES
+(3, 'Mie Goreng', 'resep mie goreng.docx.pdf', 1),
+(4, 'Bakso ayam', 'resep bakso.pdf', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tempat_makan`
 --
 
 CREATE TABLE `tempat_makan` (
   `id` int(11) NOT NULL,
   `Nama_Tempat` varchar(45) NOT NULL,
   `Alamat` varchar(100) NOT NULL,
+  `Maps` varchar(100) NOT NULL,
   `id_admin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tempat_makan`
+-- Dumping data untuk tabel `tempat_makan`
 --
 
-INSERT INTO `tempat_makan` (`id`, `Nama_Tempat`, `Alamat`, `id_admin`) VALUES
-(1, 'Richeese Factory Denpasar', 'jalan gatsu barat no 4 denpasar bali', 1),
-(2, 'Ngerodok Resto', 'Jalam Mulawarman Gianyar', 1);
+INSERT INTO `tempat_makan` (`id`, `Nama_Tempat`, `Alamat`, `Maps`, `id_admin`) VALUES
+(1, 'Richeese Factory Denpasar', 'Tengah, Jl. Gatot Subroto Barat Desa No.1, Pemecutan Kaja, Kec. Denpasar Bar., Kota Denpasar, Bali 8', 'https://goo.gl/maps/fNgyznKEZBZjDhbF9', 1),
+(3, 'Ngerodok Resto', 'Jl. Mulawarman No.132A, Abianbase, Kec. Gianyar, Kabupaten Gianyar, Bali 80515', 'https://goo.gl/maps/mj4gkBCYZzoRDGFR7', 1),
+(4, 'tempong', 'Jalan Udayana', 'https://goo.gl/maps/fNgyznKEZBZjDhbF9', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `data_kuliner`
+-- Indeks untuk tabel `data_kuliner`
 --
 ALTER TABLE `data_kuliner`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `data_login`
+-- Indeks untuk tabel `data_login`
 --
 ALTER TABLE `data_login`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indeks untuk tabel `resep`
+--
+ALTER TABLE `resep`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tempat_makan`
+--
+ALTER TABLE `tempat_makan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `data_kuliner`
+-- AUTO_INCREMENT untuk tabel `data_kuliner`
 --
 ALTER TABLE `data_kuliner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+
+--
+-- AUTO_INCREMENT untuk tabel `resep`
+--
+ALTER TABLE `resep`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT untuk tabel `tempat_makan`
+--
+ALTER TABLE `tempat_makan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
